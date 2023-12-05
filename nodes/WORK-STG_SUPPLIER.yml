@@ -1,0 +1,135 @@
+steps:
+  STG_SUPPLIER-cf4ccc9e-7bae-43b2-a08f-cb278e35a579:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: Supplier data as defined by TPC-H
+      isMultisource: false
+      locationName: WORK
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b6a56601-b080-4745-b1ac-d6b73d96b27d
+              stepCounter: cf4ccc9e-7bae-43b2-a08f-cb278e35a579
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f92e4cfa-aaa5-40bb-82a5-d1218607b28d
+                    stepCounter: 6838f10c-9ecc-486e-a50c-28c1e288344d
+                transform: ""
+          - columnReference:
+              columnCounter: aeb109b6-7019-4e5e-aa44-bc55df53a479
+              stepCounter: cf4ccc9e-7bae-43b2-a08f-cb278e35a579
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a1a9bd35-3d01-45cc-9f09-c98833710aac
+                    stepCounter: 6838f10c-9ecc-486e-a50c-28c1e288344d
+                transform: ""
+          - columnReference:
+              columnCounter: f2be9dc4-8920-4e21-a7f7-82968c4903ba
+              stepCounter: cf4ccc9e-7bae-43b2-a08f-cb278e35a579
+            dataType: VARCHAR(40)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_ADDRESS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4ff32df1-8608-4640-a7de-610303ed6bd6
+                    stepCounter: 6838f10c-9ecc-486e-a50c-28c1e288344d
+                transform: ""
+          - columnReference:
+              columnCounter: 0d880eeb-8642-412b-8d2b-2113be4e42e1
+              stepCounter: cf4ccc9e-7bae-43b2-a08f-cb278e35a579
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_NATIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 86335a5d-4476-4c90-9aa1-2a9fc24a41c4
+                    stepCounter: 6838f10c-9ecc-486e-a50c-28c1e288344d
+                transform: ""
+          - columnReference:
+              columnCounter: 1f224cd3-79bb-4883-ba6d-22b07a192380
+              stepCounter: cf4ccc9e-7bae-43b2-a08f-cb278e35a579
+            dataType: VARCHAR(15)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_PHONE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9e0ee43c-b75d-48a4-8898-7ab84de395ae
+                    stepCounter: 6838f10c-9ecc-486e-a50c-28c1e288344d
+                transform: ""
+          - columnReference:
+              columnCounter: a05259f8-b391-4222-9f61-19ff9c9823d3
+              stepCounter: cf4ccc9e-7bae-43b2-a08f-cb278e35a579
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_ACCTBAL
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 99aa9183-d05c-4a1e-a637-683e0bb2fc09
+                    stepCounter: 6838f10c-9ecc-486e-a50c-28c1e288344d
+                transform: ""
+          - columnReference:
+              columnCounter: 47c6c847-59a6-4518-bcba-ecc4405fce52
+              stepCounter: cf4ccc9e-7bae-43b2-a08f-cb278e35a579
+            dataType: VARCHAR(101)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 98ee70ad-b72a-4a3e-9fd9-16b1f7c33a12
+                    stepCounter: 6838f10c-9ecc-486e-a50c-28c1e288344d
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SRC
+                nodeName: SUPPLIER
+            join:
+              joinCondition: FROM {{ ref('SRC', 'SUPPLIER') }} "SUPPLIER"
+            name: STG_SUPPLIER
+            noLinkRefs: []
+      name: STG_SUPPLIER
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: cf4ccc9e-7bae-43b2-a08f-cb278e35a579
